@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    # python manage.py makemigrations && python manage.py migrate && echo \"from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin', 'admin@example.com', 'adm1n@123')\" | python manage.py shell && 
+    # command: bash -c "python manage.py makemigrations && python manage.py migrate  && echo \"from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin', 'admin@gmail.com', 'adm1n@123')\" | python manage.py shell &&  python manage.py runserver 0.0.0.0:9000"
+    command: bash -c "python manage.py makemigrations && python manage.py migrate  && python manage.py loaddata initial_data && python manage.py runserver 0.0.0.0:9000"
+    ports:
+      - "9000:9000"
+    volumes:
+    #  - ./your_project_directory:/app  # This maps your project directory to /app in the container
+      - .:/app  # This maps your project directory to /app in the container
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=backend_api_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=roOt@5
+
+
+
+
+
+
+
+      

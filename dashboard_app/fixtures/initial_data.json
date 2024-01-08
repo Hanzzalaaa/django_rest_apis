@@ -1,0 +1,11 @@
+
+[
+    {"model": "dashboard_app.plan", "pk": 1, "fields":
+                            {"name": "Free", "price": "0.00"}},
+    {"model": "dashboard_app.plan", "pk": 2, "fields":
+                             {"name": "Standard", "price": "10.00"}},
+    {"model": "dashboard_app.plan", "pk": 3, "fields":
+                             {"name": "Pro", "price": "25.00"}}
+                            
+                            
+]

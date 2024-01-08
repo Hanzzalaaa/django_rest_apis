@@ -1,1 +1,28 @@
-.env
+syntax: glob
+*.db
+*.env
+*.pyc
+*.pkl
+*.orig
+*.py~
+*.txt~
+*.xls
+*.xlsx
+*.xls~
+*.xlsx~
+*.pdf
+*.tar
+*.tar.gz
+*.csv
+*.log*
+*.xlb
+*.XLS
+*.py.orig
+*.zip
+*.sqlite3
+**/media/*
+**/.idea/*
+media/*
+.idea/*
+typescript
+# **/local_settings.py
